@@ -29,5 +29,15 @@ namespace TestesUnitarios.Desafio.Console.Services
         {
             return lista.Min();
         }
-    }
-}
+        public bool ListaNaoPodeConterDeterminadoNumero (List<int> lista, int numero){
+            var seTiver = lista.Contains(numero);
+            lista.Remove(numero);
+            seTiver = lista.Contains(numero);
+            return seTiver;
+        }
+        public List<int> MultiplicarNumerosPorDois(List<int> lista)
+        {
+            var listaMultiplicada = lista.Select(x => x * 2).ToList();
+            return listaMultiplicada;
+            }
+}}
